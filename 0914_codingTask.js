@@ -12,7 +12,7 @@ if (Matt>=underTh && Simon>=underTh) {  // task3
   // task6
   if (Matt>=underTh) {
     console.log("Matt passed the exam. His score:" + Matt)
-  } else if (Simon>=underTh) {
+  } else {
     console.log("Simon passed the exam. His score:" + Simon)
   }
 } else {  // task5
