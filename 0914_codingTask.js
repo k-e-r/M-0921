@@ -1,9 +1,9 @@
 // task1
-var Matt = 20
-var Simon = 51
+let Matt = 20
+let Simon = 51
 
 // task2
-var underTh = 51
+const underTh = 51
 
 if (Matt>=underTh && Simon>=underTh) {  // task3
   console.log("both of them passed the exam.")
