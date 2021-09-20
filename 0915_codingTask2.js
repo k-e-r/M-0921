@@ -17,50 +17,49 @@
 // SOLUTION:
 // task1
 const students = [
-    {
-        name: 'John',
-        score1: 47,
-        score2: 46
-    },
-    {
-        name: 'Bob',
-        score1: 23,
-        score2: 24
-    },
-    {
-        name: 'Nick',
-        score1: 40,
-        score2: 35
-    },
-    {
-        name: 'Alex',
-        score1: 44,
-        score2: 45
-    }
-]
+  {
+    name: "John",
+    score1: 47,
+    score2: 46,
+  },
+  {
+    name: "Bob",
+    score1: 23,
+    score2: 24,
+  },
+  {
+    name: "Nick",
+    score1: 40,
+    score2: 35,
+  },
+  {
+    name: "Alex",
+    score1: 44,
+    score2: 45,
+  },
+];
 
 // task2
-const degs = ['A', 'B', 'C', 'D', 'E']
-const pass = [91, 81, 71, 61, 51]
+const degs = ["A", "B", "C", "D", "E"];
+const pass = [91, 81, 71, 61, 51];
 
 // task3
 function totalScore() {
-    // task4
-    let deg, score
-    for (let student of students) {
-        score = student.score1 + student.score2
-        for (let j=0; j < pass.length; j++) {
-            if (score >= pass[j]) {
-                deg = degs[j]
-                break
-            } else deg='failed'
-        }
-        console.log(student.name + '\'s degree:' + deg)
+  // task4
+  let deg, score;
+  for (let student of students) {
+    score = student.score1 + student.score2;
+    for (let j = 0; j < pass.length; j++) {
+      if (score >= pass[j]) {
+        deg = degs[j];
+        break;
+      } else deg = "failed";
     }
+    console.log(student.name + "'s degree:" + deg);
+  }
 }
 
-totalScore()
-
+totalScore();
 
 /* 
 // sample answer
