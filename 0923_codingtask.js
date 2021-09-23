@@ -63,17 +63,17 @@ console.log("----------------------");
 
 // solution3(ex.the shortest code)
 // compare current value with next value
-function isSorted1(arr) {
+function isSorted3(arr) {
   let j = 0;
   for (i = 0; i < arr.length - 1; i++) arr[i] < arr[i + 1] ? j++ : j--;
   return Math.abs(j) === i;
 }
 
 console.log("Solution 3:");
-console.log(isSorted1([]));
-console.log(isSorted1([42]));
-console.log(isSorted1([39, 42]));
-console.log(isSorted1([42, 39]));
-console.log(isSorted1([1, 2, 3, 4, 5]));
-console.log(isSorted1([5, 4, 3, 2, 1]));
-console.log(isSorted1([1, 5, 2]));
+console.log(isSorted3([]));
+console.log(isSorted3([42]));
+console.log(isSorted3([39, 42]));
+console.log(isSorted3([42, 39]));
+console.log(isSorted3([1, 2, 3, 4, 5]));
+console.log(isSorted3([5, 4, 3, 2, 1]));
+console.log(isSorted3([1, 5, 2]));
