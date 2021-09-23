@@ -22,6 +22,7 @@ function isSorted1(arr) {
   return false;
 }
 
+console.log("Solution 1:");
 console.log(isSorted1([]));
 console.log(isSorted1([42]));
 console.log(isSorted1([39, 42]));
@@ -49,6 +50,7 @@ function isSorted2(arr) {
   return false;
 }
 
+console.log("Solution 2:");
 console.log(isSorted2([]));
 console.log(isSorted2([42]));
 console.log(isSorted2([39, 42]));
@@ -56,3 +58,22 @@ console.log(isSorted2([42, 39]));
 console.log(isSorted2([1, 2, 3, 4, 5]));
 console.log(isSorted2([5, 4, 3, 2, 1]));
 console.log(isSorted2([1, 5, 2]));
+
+console.log("----------------------");
+
+// solution3(ex.the shortest code)
+// compare current value with next value
+function isSorted1(arr) {
+  let j = 0;
+  for (i = 0; i < arr.length - 1; i++) arr[i] < arr[i + 1] ? j++ : j--;
+  return Math.abs(j) === i;
+}
+
+console.log("Solution 3:");
+console.log(isSorted1([]));
+console.log(isSorted1([42]));
+console.log(isSorted1([39, 42]));
+console.log(isSorted1([42, 39]));
+console.log(isSorted1([1, 2, 3, 4, 5]));
+console.log(isSorted1([5, 4, 3, 2, 1]));
+console.log(isSorted1([1, 5, 2]));
