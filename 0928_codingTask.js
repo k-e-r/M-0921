@@ -9,7 +9,7 @@ This function should mimic the functionality of Math.pow()
 // power(2,4) // 16
 
 function power(base, exponent) {
-  if (exponent < 1) return 1;
+  if (exponent < 1) return 1; // ignore negative value
   return base * power(base, exponent - 1);
 }
 console.log("01--------------------");
@@ -47,12 +47,12 @@ a new string in reverse.
 function reverse(str) {
   // add whatever parameters you deem necessary - good luck!
   if (str.length === 1) return str;
-  if (typeof str !== typeof []) str = str.split("");
-  return str.pop() + reverse(str);
+  return str.slice(str.length - 1) + reverse(str.slice(0, str.length - 1));
 }
 console.log("03--------------------");
 console.log(reverse("awesome")); // 'emosewa'
 console.log(reverse("rithmschool")); // 'loohcsmhtir'
+console.log(reverse("test")); // 'tset'
 
 /* 04-----------------------isPalindrome---------------------------------------------------------------------
 Write a recursive function called 'isPalindrome' which returns true if the string 
@@ -68,14 +68,17 @@ Otherwise it returns false.
 function isPalindrome(str) {
   // add whatever parameters you deem necessary - good luck!
   if (str.length === 1) return true;
-  if (typeof str !== typeof []) str = str.split("");
-  if (str.pop() === str.shift()) isPalindrome(str);
-  else return false;
-  return true;
+  return str.slice(str.length - 1) === str.slice(0, 1)
+    ? isPalindrome(str.slice(1, str.length - 1))
+    : false;
 }
+// if (str.length === 1) return str;
+// return str.slice(str.length - 1) + reverse(str.slice(0, str.length - 1));
 console.log("04--------------------");
 console.log(isPalindrome("awesome")); // false
 console.log(isPalindrome("foobar")); // false
 console.log(isPalindrome("tacocat")); // true
 console.log(isPalindrome("amanaplanacanalpanama")); // true
 console.log(isPalindrome("amanaplanacanalpandemonium")); // false
+
+console.log(isPalindrome("m")); // true
