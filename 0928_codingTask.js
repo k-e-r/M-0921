@@ -67,7 +67,7 @@ Otherwise it returns false.
 
 function isPalindrome(str) {
   // add whatever parameters you deem necessary - good luck!
-  if (str.length === 1) return;
+  if (str.length === 1) return true;
   if (typeof str !== typeof []) str = str.split("");
   if (str.pop() === str.shift()) isPalindrome(str);
   else return false;
