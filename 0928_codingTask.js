@@ -46,7 +46,9 @@ a new string in reverse.
 
 function reverse(str) {
   // add whatever parameters you deem necessary - good luck!
-  return str.split("").reverse().join("");
+  if (str.length === 1) return str;
+  if (typeof str !== typeof []) str = str.split("");
+  return str.pop() + reverse(str);
 }
 console.log("03--------------------");
 console.log(reverse("awesome")); // 'emosewa'
@@ -65,7 +67,11 @@ Otherwise it returns false.
 
 function isPalindrome(str) {
   // add whatever parameters you deem necessary - good luck!
-  return str.split("").reverse().join("") === str;
+  if (str.length === 1) return;
+  if (typeof str !== typeof []) str = str.split("");
+  if (str.pop() === str.shift()) isPalindrome(str);
+  else return false;
+  return true;
 }
 console.log("04--------------------");
 console.log(isPalindrome("awesome")); // false
