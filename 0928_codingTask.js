@@ -69,9 +69,7 @@ Otherwise it returns false.
 function isPalindrome(str) {
   // add whatever parameters you deem necessary - good luck!
   if (str.length === 1) return true;
-  return str.slice(str.length - 1) === str[0]
-    ? isPalindrome(str.slice(1, -1))
-    : false;
+  return str.slice(-1) === str[0] ? isPalindrome(str.slice(1, -1)) : false;
 }
 // if (str.length === 1) return str;
 // return str.slice(str.length - 1) + reverse(str.slice(0, str.length - 1));
