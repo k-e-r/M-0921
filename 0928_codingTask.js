@@ -28,7 +28,7 @@ returns the product of them all.
 // productOfArray([1,2,3,10]) // 60
 
 function productOfArray(arr) {
-  if (arr.length === 1) return arr;
+  if (arr.length <= 1) return arr; // ignore empty array
   return arr.shift() * productOfArray(arr);
 }
 console.log("02--------------------");
@@ -36,6 +36,7 @@ console.log(productOfArray([1, 2, 3])); // 6
 console.log(productOfArray([1, 2, 3, 10])); // 60
 console.log(productOfArray([5, 2, 3])); // 30
 console.log(productOfArray([2, 2, 3, 10])); // 120
+console.log(productOfArray([])); // []
 
 /* 03-----------------------reverse---------------------------------------------------------------------
 Write a recursive function called 'reverse' which accepts a string and returns 
@@ -47,7 +48,7 @@ a new string in reverse.
 function reverse(str) {
   // add whatever parameters you deem necessary - good luck!
   if (str.length === 1) return str;
-  return str.slice(str.length - 1) + reverse(str.slice(0, str.length - 1));
+  return reverse(str.slice(1)) + str[0];
 }
 console.log("03--------------------");
 console.log(reverse("awesome")); // 'emosewa'
@@ -68,8 +69,8 @@ Otherwise it returns false.
 function isPalindrome(str) {
   // add whatever parameters you deem necessary - good luck!
   if (str.length === 1) return true;
-  return str.slice(str.length - 1) === str.slice(0, 1)
-    ? isPalindrome(str.slice(1, str.length - 1))
+  return str.slice(str.length - 1) === str[0]
+    ? isPalindrome(str.slice(1, -1))
     : false;
 }
 // if (str.length === 1) return str;
