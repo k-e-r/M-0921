@@ -20,8 +20,7 @@ public class Crocodile extends Reptile {
     return eggs;
   }
 
-  @Override
-  public String toString() {
+  public String ShowInfo() {
     return "Crocodile [getSkin()=" + getSkin() + ", getBone()=" + getBone() + ", getEggs()=" + getEggs()
         + ", getHeight()=" + getHeight() + ", getWeight()=" + getWeight() + ", getAnimalType()=" + getAnimalType()
         + ", getBloodType()=" + getBloodType() + "]";

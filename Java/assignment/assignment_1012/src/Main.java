@@ -6,14 +6,14 @@ public class Main {
         Reptile reptile = new Reptile();
         Crocodile crocodile = new Crocodile();
         System.out.println(reptile.getEggs());
-        System.out.println(crocodile);
+        System.out.println(crocodile.ShowInfo());
 
         Fish fish = new Fish();
         Eel eel = new Eel();
         System.out.println(fish.getFeature());
-        System.out.println(eel);
+        System.out.println(eel.ShowInfo());
 
         Eagle eagle = new Eagle();
-        System.out.println(eagle);
+        System.out.println(eagle.ShowInfo());
     }
 }

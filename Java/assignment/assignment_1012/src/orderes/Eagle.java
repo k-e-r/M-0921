@@ -11,8 +11,7 @@ public class Eagle extends Birds {
     super(desc, feature, height, weight, animalType, bloodType);
   }
 
-  @Override
-  public String toString() {
+  public String ShowInfo() {
     return "Eagle [getdesc()=" + getDesc() + ", getFeature()=" + getFeature() + ", getHeight()=" + getHeight()
         + ", getWeight()=" + getWeight() + ", getAnimalType()=" + getAnimalType() + ", getBloodType()=" + getBloodType()
         + "]";

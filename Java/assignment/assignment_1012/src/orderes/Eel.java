@@ -20,8 +20,7 @@ public class Eel extends Fish {
     return feature;
   }
 
-  @Override
-  public String toString() {
+  public String ShowInfo() {
     return "Eel [getHabita()=" + getHabitat() + ", getFeature()=" + getFeature() + ", getHeight()=" + getHeight()
         + ", getWeight()=" + getWeight() + ", getAnimalType()=" + getAnimalType() + ", getBloodType()=" + getBloodType()
         + "]";
