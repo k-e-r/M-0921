@@ -44,10 +44,10 @@ public class Lab3Q3 {
       }
     }
 
-    for (Car num : lists) {
-      System.out.print(num.getMake() + " ");
-      System.out.print(num.getModel() + " ");
-      System.out.println(num.getYear());
+    for (Car list : lists) {
+      System.out.print(list.getMake() + " ");
+      System.out.print(list.getModel() + " ");
+      System.out.println(list.getYear());
     }
   }
 
