@@ -10,7 +10,7 @@ public class Lab3Q1 {
 
 		Random r = new Random();
 		for (int i = 0; i < listNum; i++) {
-			list.add(r.nextInt(49) + 1);
+			list.add(r.nextInt(50) + 1);
 		}
 		System.out.println(list);
 		System.out.println("*****************");
