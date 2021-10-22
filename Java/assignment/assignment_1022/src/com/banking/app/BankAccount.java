@@ -23,13 +23,11 @@ public class BankAccount<s1, s2> {
     }
 
     void deposit(int amount) {
-        if (amount >= 0) {
+        if (amount > 0) {
             balance = balance + amount;
             previousTransaction = amount;
         } else {
             if (amount <= 0) {
-                errorMessage("Invalid amount! Please enter correct amount.");
-            } else {
                 errorMessage("Invalid amount! Please enter correct amount.");
             }
         }
