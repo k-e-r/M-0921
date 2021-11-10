@@ -34,6 +34,30 @@
           </tbody>
         </table>
       </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Employees List</h4>
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr th:each="field: ${employeeList}">
+                <td th:text="${field.employeeId}"></td>
+                <td th:text="${field.firstName}"></td>
+                <td th:text="${field.lastName}"></td>
+                <td th:text="${field.email}"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
   </div>
